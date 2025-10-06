@@ -3,10 +3,10 @@ console.log(uuidv4);
 
 import {initialTodos, validationConfig} from "../utils/constants.js";
 import Todo from "../components/Todo.js";
-import FormValidate from "../components/FormValidator.js";
+import FormValidate from "../components/Formvalidator.js";
 import Section from '../components/Section.js';
-import PopupWithForm from '../components/PopupWithForm.js';
-import TodoCounter from '../components/TodoCounter.js';
+import PopupWithForm from '../components/Popupwithform.js';
+import TodoCounter from '../components/Todocounter.js';
 
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopupEL = document.querySelector("#add-todo-popup");

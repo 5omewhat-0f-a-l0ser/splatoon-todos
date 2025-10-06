@@ -1,0 +1,67 @@
+.page {
+  background-image:url(../images/Splatoon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: Splatoon, Arial, sans-serif;
+}
+
+
+.page__content {
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  max-width: 726px;
+  min-height: 782px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px 0px #000000;
+  padding: 20px;
+}
+
+.page__outro {
+  color: white; /* Keep the text bright white */
+  font-size: 1.1rem; /* Increase size slightly for readability */
+  line-height: 1.5; /* Add space between lines */
+  padding: 20px; /* Add padding inside the text box (optional) */
+
+  /* CREATE THE POP EFFECT: 
+  Use a thick black text-shadow to outline every character. 
+  It acts like a thick border (stroke) around the individual letters.
+  */
+  text-shadow: 
+    -1px -1px 0 #000,  /* Shadow left-up */
+     1px -1px 0 #000,  /* Shadow right-up */
+    -1px  1px 0 #000,  /* Shadow left-down */
+     1px  1px 0 #000;  /* Shadow right-down */
+}
+
+/* Style the link inside the text */
+.page__outro a {
+  /* Make the link itself stand out */
+  color: #ff0099; /* Use a bright Splatoon color (e.g., magenta) */
+  text-decoration: none; /* Remove default underline */
+  font-weight: bold;
+
+  /* Apply the same text-shadow to the link for consistent "pop" */
+  text-shadow: 
+    -1px -1px 0 #000, 
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+/*Thank you Gemini!*/
+
+@media screen and (max-width: 1030px) {
+  .page__content {
+    margin-top: 52px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .page__content {
+    padding: 20px 12px;
+  }
+}
