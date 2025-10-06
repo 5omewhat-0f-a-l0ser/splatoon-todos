@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Inkling";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/Inkling-Regular.woff") format("truetype");
+}
+
+@font-face {
+  font-family: "Splatoon";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/Splatoon1.woff") format("truetype");
+}
+@font-face {
+  font-family: "Alterna";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/SplatoonAlterna.woff") format("truetype");
+}
+
+@font-face {
+  font-family: "Splatwoon";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/Splatoon2.woff") format("truetype");
+}
+
+@font-face {
+  font-family: "Inkling";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/Inkling-Regular.woff2") format("truetype");
+}
+
+@font-face {
+  font-family: "Splatoon";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/Splatoon1.woff2") format("truetype");
+}
+@font-face {
+  font-family: "Alterna";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/SplatoonAlterna.woff2") format("truetype");
+}
+
+@font-face {
+  font-family: "Splatwoon";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/Splatoon2.woff2") format("truetype");
+}
