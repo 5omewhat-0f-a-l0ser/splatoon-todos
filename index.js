@@ -38,10 +38,27 @@ const addTodoPopup = new PopupWithForm({
 });
 
 addTodoPopup.setEventListeners();
+function saveTodos() {
+  // Select all todos currently in the list
+  const todos = Array.from(document.querySelectorAll('.todo')).map(todoEl => {
+    const name = todoEl.querySelector('.todo__name').textContent;
+    const dateText = todoEl.querySelector('.todo__date').textContent.replace('Due: ', '');
+    return {
+      name,
+      date: new Date(dateText),
+      id: todoEl.dataset.id,
+  
+    };
+  });
+
+  localStorage.setItem('todos', JSON.stringify(todos));
+}
+
 
 function handleCheck(isCompleted) {
   todoCounter.updateCompleted(isCompleted);
   console.log(isCompleted);
+  saveTodos();
 }
 
 function handleDelete(isCompleted) {
@@ -50,7 +67,9 @@ function handleDelete(isCompleted) {
   }
 
   todoCounter.updateTotal(false);
+  saveTodos();
 }
+
 
 
 const generateTodo = (data) => {
@@ -61,12 +80,15 @@ const generateTodo = (data) => {
  return todoElement;
 };
 
+const savedTodos = JSON.parse(localStorage.getItem('todos')) || initialTodos;
+
 const section = new Section({
-  items: initialTodos,
+  items: savedTodos,
   renderer: (item) => renderTodo(item),
-  containerSelector: '.todos__list' 
-});    
-section.renderItems(); 
+  containerSelector: '.todos__list'
+});
+section.renderItems();
+
 
 addTodoButton.addEventListener("click", () => {
   addTodoPopup.open();
@@ -100,6 +122,7 @@ addTodoButton.addEventListener("click", () => {
 function renderTodo(data){
   const todo = generateTodo(data);
   section.addItem(todo);
+  saveTodos();
 };
 
 const newTodoValidator = new FormValidate(validationConfig, addTodoForm);
